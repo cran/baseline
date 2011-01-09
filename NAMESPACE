@@ -1,0 +1,24 @@
+importFrom(graphics, plot)
+import(SparseM)
+exportPattern("^[^\\.]") # Export all except .functions
+exportClassPattern("^[^\\.]") # Export all S4 classes # baseline, predictorTest, predictorResult, PLSRTest, ridgeRegressionTest, baselineAlg, baselineAlgTest, baselineAlgResult)
+exportMethods(	plot,         # Export all S4 methods
+				getSpectra,
+				getCorrected,
+				getBaseline,
+				getCall,
+				param,
+				qualMeas,
+				ind.min,
+				minQualMeas,
+				param.min,
+				qualMeasName,
+				paramName,
+				runTest,
+				name,
+				description,
+				funcName,
+				algorithm,
+				extraArgs,
+				qualMeas.ind.min,
+				param.ind.min)
