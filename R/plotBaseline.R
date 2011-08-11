@@ -1,4 +1,4 @@
-## $Id: plotBaseline.R 179 2011-01-09 14:29:07Z bhm $
+## $Id: plotBaseline.R 188 2011-08-11 07:50:28Z kristl $
 ### Plot function for estimated baseline (result of call to baseline).
 
 ###
@@ -62,7 +62,7 @@ plotBaseline <- function(x, y, specNo = 1, grid = FALSE, labels = 1:n,
     if(grid) grid()
 
     ## Corrected spectrum and baseline
-    plot(xvals, corrected, type = "l", xlim = xlim, ylim = ylim, xaxt = xaxt,
+    plot(xvals, corrected, type = "l", xlim = xlim, ylim = ylimc, xaxt = xaxt,
          xlab = "", ylab = "", main = "Baseline corrected spectrum")
     lines(xvals, numeric(n), col = 2)   # Baseline
     if (!is.numeric(labels)) axis(1, ticks, labels[ticks], ...)
