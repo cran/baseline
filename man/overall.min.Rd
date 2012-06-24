@@ -23,12 +23,9 @@ overall.min(results)
   \item{param}{A list with the parameter values corresponding to the
   minimum quality measure value}
 }
-\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
+\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
 \seealso{
   \code{\link{doOptim}}
-}
-\examples{
-##FIXME
 }
 \keyword{baseline}
 \keyword{spectra}

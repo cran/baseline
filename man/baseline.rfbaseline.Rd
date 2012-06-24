@@ -37,7 +37,7 @@ baseline.rfbaseline(spectra, span = 2/3, NoXP = NULL, maxit = c(2, 2),
 \references{ Andreas F. Ruckstuhl, Matthew P. Jacobson, Robert W. Field,
   James A. Dodd:
   Baseline subtraction using robust local regression estimation }
-\author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
+\author{ Kristian Hovde Liland and BjÃ¸rn-Helge Mevik }
 \examples{
 data(milk)
 bc.rbe <- baseline(milk$spectra[1,, drop=FALSE], method='rfbaseline',

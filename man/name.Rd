@@ -18,12 +18,9 @@ description(object)
 \value{
   The methods return the corresponding slot of the object.
 }
-\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
+\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
 \seealso{
   \code{\linkS4class{baselineAlg}}, \code{\link{funcName}}.
-}
-\examples{
-##FIXME
 }
 \keyword{baseline}
 \keyword{spectra}

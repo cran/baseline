@@ -16,11 +16,12 @@ optimWizard(X, y, postproc, predictionTest, cvsegments)
   \item{predictionTest}{ Custom prediction object (optional) }
   \item{cvsegments}{ Cross-validation segments (optional)}
 }
-\author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
+\author{ Kristian Hovde Liland and BjÃ¸rn-Helge Mevik }
 \examples{
 \dontrun{
-X <- spectra[1:100,-1]
-y <- spectra[1:100,1]
+data(milk)
+X <- milk$spectra[,-1]
+y <- milk$spectra[,1]
 optimWizard(X,y)
 }
 }

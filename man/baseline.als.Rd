@@ -28,7 +28,7 @@ baseline.als(spectra, lambda = 6, p = 0.05, maxit = 20)
 }
 \references{ Paul H. C. Eilers and Hans F.M. Boelens:
   Baseline Correction with Asymmetric Least Squares Smoothing  }
-\author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
+\author{ Kristian Hovde Liland and BjÃ¸rn-Helge Mevik }
 \examples{
 data(milk)
 bc.als <- baseline(milk$spectra[1,, drop=FALSE], lambda=10, method='als')

@@ -18,7 +18,7 @@ baselineGUI(spectra, method='irls', labels, rev.x = FALSE)
 \details{
   Creates and updates a list containing current baseline and spectrum (baseline.result)
 }
-\author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
+\author{ Kristian Hovde Liland and BjÃ¸rn-Helge Mevik }
 \examples{
 data(milk)
 \dontrun{baselineGUI(milk$spectra)}

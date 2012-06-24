@@ -40,7 +40,7 @@ mono=0, multiplier=5, left.right, lwin.rwin)
 \references{ KEVIN R. COOMBES et al.:
   Quality control and peak finding for proteomics data collected from nipple aspirate fluid
   by surface-enhanced laser desorption and ionization. }
-\author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
+\author{ Kristian Hovde Liland and BjÃ¸rn-Helge Mevik }
 \examples{
 data(milk)
 bc.peakDetection <- baseline(milk$spectra[1,, drop=FALSE], method='peakDetection',

@@ -24,7 +24,7 @@ baseline.fillPeaks(spectra, lambda, hwi, it, int)
   \item{baseline }{Matrix of baselines corresponding to spectra \code{spectra}}
   \item{corrected }{Matrix of baseline corrected spectra}
 }
-\author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
+\author{ Kristian Hovde Liland and BjÃ¸rn-Helge Mevik }
 \examples{
 data(milk)
 bc.fillPeaks <- baseline(milk$spectra[1,, drop=FALSE], lambda=6,

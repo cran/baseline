@@ -29,7 +29,7 @@ baseline(spectra, method = "irls", ...)
   \code{\link{baseline.peakDetection}},
   \code{\link{baseline.rfbaseline}}, \code{\link{baseline.rollingBall}}
 }
-\author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
+\author{ Kristian Hovde Liland and BjÃ¸rn-Helge Mevik }
 \examples{
 data(milk)
 bc.irls <- baseline(milk$spectra[1,, drop=FALSE])

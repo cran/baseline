@@ -52,12 +52,9 @@ doOptim(baselineTests, X, y, predictionTest, postproc = NULL,
   \item{param.min}{A list with the parameter values corresponding to the
   minimum quality measure value}
 }
-\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
+\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
 \seealso{
   \code{\linkS4class{baselineAlgTest}},\code{\linkS4class{predictionTest}}
-}
-\examples{
-##FIXME
 }
 \keyword{baseline}
 \keyword{spectra}

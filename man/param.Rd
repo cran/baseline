@@ -22,15 +22,12 @@ param(object)
 \value{
   The \code{param} slot of the object.  Usually a data frame, list or numeric.
 }
-\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
+\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
 \seealso{
   Classes \code{\linkS4class{baselineAlg}},
   \code{\linkS4class{baselineAlgTest}},
   \code{\linkS4class{baselineAlgResult}},
   \code{\linkS4class{predictionResult}}
-}
-\examples{
-## FIXME
 }
 \keyword{baseline}
 \keyword{spectra}

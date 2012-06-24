@@ -1,4 +1,4 @@
-## $Id: baseline.R 170 2011-01-03 20:38:25Z bhm $
+## $Id: baseline.R 192 2012-06-19 08:36:53Z kristl $
 ### Main baseline correction function, and definition of class baseline.
 
 ###
@@ -15,8 +15,13 @@ setClass("baseline",
 
 baseline <- function (spectra, method = "irls", ...) {
     ## Get baseline algorithm function name:
-    method <- match.arg(method, names(baselineAlgorithms))
-    baseFunc <- funcName(baselineAlgorithms[[method]])
+	if(exists("baselineAlgorithms",envir=.GlobalEnv)){
+		bA <- get("baselineAlgorithms",envir=.GlobalEnv)
+	} else {
+		bA <- baselineAlgorithms
+	}
+    method <- match.arg(method, names(bA))
+    baseFunc <- funcName(bA[[method]])
 
     ## Run baseline algorithm:
     res <- do.call(baseFunc, list(spectra, ...))

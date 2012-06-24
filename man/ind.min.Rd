@@ -21,11 +21,8 @@ paramName(object)
 \value{
   The corresponding slot of the object.
 }
-\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
+\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
 \seealso{
   \code{\linkS4class{predictionResult}}
-}
-\examples{
-##FIXME
 }
 \keyword{methods}
