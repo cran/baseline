@@ -1,4 +1,4 @@
-%%% $Id: doOptim.Rd 165 2011-01-03 18:07:46Z bhm $
+%%% $Id: doOptim.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{doOptim}
 \alias{doOptim}
 \title{

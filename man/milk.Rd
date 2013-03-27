@@ -1,4 +1,4 @@
-%%% $Id: milk.Rd 181 2011-01-09 14:47:44Z bhm $
+%%% $Id: milk.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{milk}
 \alias{milk}
 \docType{data}
@@ -19,7 +19,7 @@
 	in mixed samples of cow, goat, and ewe milk.
 }
 \references{
-  Kristian Hovde Liland, Bø?rn-Helge Mevik, Elling-Olav Rukke, Trygve
+  Kristian Hovde Liland, Bj�rn-Helge Mevik, Elling-Olav Rukke, Trygve
   Almøy, Morten Skaugen and Tomas Isaksson (2009)
   Quantitative whole spectrum analysis with MALDI-TOF MS, Part I:
   Measurement optimisation.

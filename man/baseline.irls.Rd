@@ -1,4 +1,4 @@
-%%% $Id: baseline.irls.Rd 180 2011-01-09 14:44:33Z bhm $
+%%% $Id: baseline.irls.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{baseline.irls}
 \alias{baseline.irls}
 
@@ -22,7 +22,7 @@ baseline.irls(spectra, lambda1 = 5, lambda2 = 9, maxit = 200, wi = 0.05)
   \item{corrected }{Matrix of baseline corrected spectra}
   \item{smoothed }{Matrix of primary smoothed spectra}
 }
-\author{ Kristian Hovde Liland and BjÃ¸rn-Helge Mevik }
+\author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
 \examples{
 data(milk)
 bc.irls <- baseline(milk$spectra[1,, drop=FALSE], method='irls')

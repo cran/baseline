@@ -1,4 +1,4 @@
-%%% $Id: baseline.rfbaseline.Rd 185 2011-01-09 22:05:50Z kristl $
+%%% $Id: baseline.rfbaseline.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{baseline.rfbaseline}
 \alias{baseline.rfbaseline}
 
@@ -37,7 +37,7 @@ baseline.rfbaseline(spectra, span = 2/3, NoXP = NULL, maxit = c(2, 2),
 \references{ Andreas F. Ruckstuhl, Matthew P. Jacobson, Robert W. Field,
   James A. Dodd:
   Baseline subtraction using robust local regression estimation }
-\author{ Kristian Hovde Liland and BjÃ¸rn-Helge Mevik }
+\author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
 \examples{
 data(milk)
 bc.rbe <- baseline(milk$spectra[1,, drop=FALSE], method='rfbaseline',

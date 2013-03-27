@@ -1,4 +1,4 @@
-### $Id: plotOptim.R 182 2011-01-09 21:05:18Z kristl $
+### $Id: plotOptim.R 193 2012-06-24 21:13:42Z kristl $
 
 plotOptim <- function(results){
   ## Plot optimisation through GUI
@@ -37,7 +37,7 @@ plotOptim <- function(results){
     delete(groups[[i]], progress[[i]])
     # Initialize parameters and groups
     nAlgs <<- nAlgs + 1
-    name <- names(bAGUI)[nm]
+    name <- names(bA)[nm]
     nameLong <- bA[[nm]]@description
     method <- name
     
@@ -117,7 +117,7 @@ plotOptim <- function(results){
     parameterPlots[[nAlgs]][1,1] <<- glabel("")
     parameterPlots[[nAlgs]][1,2] <<- glabel("Which:")
     parameterPlots[[nAlgs]][1,3] <<- glabel("")
-    nameStrs <- c(names(result@param[1]), rownames(bAGUI[[method]])) ##### ##### #### ####### ##### ####
+    nameStrs <- c(names(result@param[1]), rownames(bA[[method]])) ##### ##### #### ####### ##### ####
     lns <- length(nameStrs)
     for(i in 1:lns)
       addparameterPlots(nameStrs[i],i)
@@ -272,7 +272,7 @@ plotOptim <- function(results){
   # Prepare notebook for algorithms
   for(i in 1:length(results$results)){
     groups[[i]] <- ggroup(horizontal=FALSE)
-    name <- names(bAGUI)[which(methodParse2==results$baselineTests[[i]]@algorithm@funcName)]
+    name <- names(bA)[which(methodParse2==results$baselineTests[[i]]@algorithm@funcName)]
     add(nb,groups[[i]],label=name)
     progress[[i]] <- glabel('Setting up GUI...')
     add(groups[[i]], progress[[i]], expand=FALSE)
@@ -282,7 +282,7 @@ plotOptim <- function(results){
   # ######### #
   algNames <- c("-> Choose first result set")
   for(i in 1:length(results$results)){ # Prepare choices for result set chooser
-    name <- names(bAGUI)[which(methodParse2==results$baselineTests[[i]]@algorithm@funcName)]
+    name <- names(bA)[which(methodParse2==results$baselineTests[[i]]@algorithm@funcName)]
     algNames[i+1] <- name
   }
   
@@ -313,7 +313,7 @@ plotOptim <- function(results){
         }
         names(m) <- nam
         ns[[i]] <- drop(do.call(qualMeas,m))
-        nams[i] <- names(bAGUI)[which(methodParse2==results$baselineTests[[i]]@algorithm@funcName)]
+        nams[i] <- names(bA)[which(methodParse2==results$baselineTests[[i]]@algorithm@funcName)]
       }
     } else {
       nams <- character(length(results$results))
@@ -327,7 +327,7 @@ plotOptim <- function(results){
           m[[3]] <- "cond.min"
         names(m) <- nam
         ns[[i]] <- drop(do.call(qualMeas,m))
-        nams[i] <- names(bAGUI)[which(methodParse2==results$baselineTests[[i]]@algorithm@funcName)]
+        nams[i] <- names(bA)[which(methodParse2==results$baselineTests[[i]]@algorithm@funcName)]
       }
     }
     plot(names(ns[[1]]),ns[[1]], type='l', xlab=nam[2], ylab=results$results[[1]]@qualMeasName)
@@ -340,8 +340,8 @@ plotOptim <- function(results){
   })
   #	minBest <- gradio(c("overall.min","cond.min"), horizontal=TRUE)
   result <- results$results[[1]]
-  method <- names(bAGUI)[which(methodParse2==results$baselineTests[[1]]@algorithm@funcName)]
-  nameStrs <- c(names(result@param[1]), rownames(bAGUI[[method]]))
+  method <- names(bA)[which(methodParse2==results$baselineTests[[1]]@algorithm@funcName)]
+  nameStrs <- c(names(result@param[1]), rownames(bA[[method]]))
   if(max(nchar(as.character(result@param[[nameStrs[1]]],scientific=TRUE)))>8){ # More than 8 digits => use scientific format
     minBest  <- gradio(c("Overall min.","Min.", "Min. avg."))
     minWhich <- gcheckboxgroup(format(result@param[[nameStrs[1]]], checked=!logical(length(result@param[[nameStrs[1]]])), scientific=TRUE, digits=3), horizontal=TRUE)

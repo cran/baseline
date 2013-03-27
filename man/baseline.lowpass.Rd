@@ -1,4 +1,4 @@
-%%% $Id: baseline.lowpass.Rd 180 2011-01-09 14:44:33Z bhm $
+%%% $Id: baseline.lowpass.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{baseline.lowpass}
 \alias{baseline.lowpass}
 
@@ -26,7 +26,7 @@ baseline.lowpass(spectra, steep = 2, half = 5)
 \references{ AHMET K. ATAKAN, W. E. BLASS, and D. E. JENNINGS:
   Elimination of Baseline Variations from a Recorded Spectrum
   by Ultra-low Frequency Filtering }
-\author{ Kristian Hovde Liland and BjÃ¸rn-Helge Mevik }
+\author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
 \examples{
 data(milk)
 bc.lowpass <- baseline(milk$spectra[1,, drop=FALSE], method='lowpass')

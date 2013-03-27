@@ -1,4 +1,4 @@
-%%% $Id: baseline-class.Rd 169 2011-01-03 20:24:13Z bhm $
+%%% $Id: baseline-class.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{baseline-class}
 \Rdversion{1.1}
 \docType{class}
@@ -36,7 +36,7 @@ class; see \code{\link{plot,baseline-method}}.
       original spectra}
 	 }
 }
-\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
+\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
 
 \section{Warning}{In a future versoion, one of the slots might be
   removed from the class definition and calculated on the fly instead,

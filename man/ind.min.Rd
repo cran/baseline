@@ -1,4 +1,4 @@
-%%% $Id: ind.min.Rd 179 2011-01-09 14:29:07Z bhm $
+%%% $Id: ind.min.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{ind.min}
 \alias{ind.min}
 \alias{ind.min-methods}
@@ -21,7 +21,7 @@ paramName(object)
 \value{
   The corresponding slot of the object.
 }
-\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
+\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
 \seealso{
   \code{\linkS4class{predictionResult}}
 }

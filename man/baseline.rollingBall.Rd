@@ -1,4 +1,4 @@
-%%% $Id: baseline.rollingBall.Rd 185 2011-01-09 22:05:50Z kristl $
+%%% $Id: baseline.rollingBall.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{baseline.rollingBall}
 \alias{baseline.rollingBall}
 
@@ -21,7 +21,7 @@ baseline.rollingBall(spectra, wm, ws)
 }
 \references{ M.A. Kneen, H.J. Annegarn:
   Algorithm for fitting XRF, SEM and PIXE X-ray spectra backgrounds }
-\author{ Kristian Hovde Liland and BjÃ¸rn-Helge Mevik }
+\author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
 \examples{
 data(milk)
 bc.rollingBall <- baseline(milk$spectra[1,, drop=FALSE], wm=200, ws=200,

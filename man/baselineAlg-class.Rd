@@ -1,4 +1,4 @@
-%%% $Id: baselineAlg-class.Rd 165 2011-01-03 18:07:46Z bhm $
+%%% $Id: baselineAlg-class.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{baselineAlg-class}
 \Rdversion{1.1}
 \docType{class}
@@ -54,7 +54,7 @@ Objects can be created by calls of the form \code{new("baselineAlg", ...)}.
       the \code{param} slot}
   }
 }
-\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
+\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
 \note{The goal is that the
   optimisation framework and the GUI code should get all information about
   available baseline algorithms through a list of \code{baselineAlg}

@@ -1,4 +1,4 @@
-%%% $Id: plotBaseline.Rd 180 2011-01-09 14:44:33Z bhm $
+%%% $Id: plotBaseline.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{plotBaseline}
 \alias{plotBaseline}
 \alias{plot,baseline-method}
@@ -38,7 +38,7 @@ plotBaseline(x, y, specNo = 1, grid = FALSE, labels = 1:n, rev.x = FALSE,
   underlying work-horse function, and is not meant for interactive use.
 }
 \author{
-  Kristian Hovde Liland and BjÃ¸rn-Helge Mevik
+  Kristian Hovde Liland and Bjørn-Helge Mevik
 }
 \note{
   Because the argument list of any plot method must start with \code{x},

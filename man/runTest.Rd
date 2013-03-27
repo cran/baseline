@@ -1,4 +1,4 @@
-%%% $Id: runTest.Rd 165 2011-01-03 18:07:46Z bhm $
+%%% $Id: runTest.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{runTest}
 \alias{runTest}
 \alias{runTest-methods}
@@ -54,7 +54,7 @@ runTest(object, X, y, ...)
 \code{runTest} returns an object of class
 \code{\linkS4class{predictionResult}} or \code{\linkS4class{baselineAlgResult}}.
 }
-\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
+\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
 \seealso{
   \code{\linkS4class{baselineAlgTest}},
   \code{\linkS4class{predictionTest}}, \code{\linkS4class{PLSRTest}},

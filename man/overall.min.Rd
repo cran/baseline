@@ -1,4 +1,4 @@
-%%% $Id: overall.min.Rd 165 2011-01-03 18:07:46Z bhm $
+%%% $Id: overall.min.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{overall.min}
 \alias{overall.min}
 \title{
@@ -23,7 +23,7 @@ overall.min(results)
   \item{param}{A list with the parameter values corresponding to the
   minimum quality measure value}
 }
-\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
+\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
 \seealso{
   \code{\link{doOptim}}
 }

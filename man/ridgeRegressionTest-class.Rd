@@ -1,4 +1,4 @@
-%%% $Id: ridgeRegressionTest-class.Rd 163 2011-01-03 17:27:46Z bhm $
+%%% $Id: ridgeRegressionTest-class.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{ridgeRegressionTest-class}
 \Rdversion{1.1}
 \docType{class}
@@ -26,7 +26,7 @@ Class \code{\linkS4class{predictionTest}}, directly.
       the test}
   }
 }
-\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
+\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
 \seealso{
   The base class \code{\linkS4class{predictionTest}}.  The
   \code{\link{runTest}} function.

@@ -1,4 +1,4 @@
-%%% $Id: baselineGUI.Rd 180 2011-01-09 14:44:33Z bhm $
+%%% $Id: baselineGUI.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{baselineGUI}
 \alias{baselineGUI}
 
@@ -18,7 +18,7 @@ baselineGUI(spectra, method='irls', labels, rev.x = FALSE)
 \details{
   Creates and updates a list containing current baseline and spectrum (baseline.result)
 }
-\author{ Kristian Hovde Liland and BjÃ¸rn-Helge Mevik }
+\author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
 \examples{
 data(milk)
 \dontrun{baselineGUI(milk$spectra)}

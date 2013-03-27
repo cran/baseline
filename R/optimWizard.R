@@ -1,4 +1,4 @@
-### $Id: optimWizard.R 192 2012-06-19 08:36:53Z kristl $
+### $Id: optimWizard.R 193 2012-06-24 21:13:42Z kristl $
 
 optimWizard <- function(X, y, postproc, predictionTest, cvsegments){
   ## Organize optimization through GUI
@@ -39,6 +39,7 @@ optimWizard <- function(X, y, postproc, predictionTest, cvsegments){
   } else {
     bAGUI <- baselineAlgorithmsGUI
   }
+  GUI.names <- sort(names(bAGUI))
   if(exists("baselineAlgorithms",envir=.GlobalEnv)){
     bA <- get("baselineAlgorithms",envir=.GlobalEnv)
   } else {
@@ -54,7 +55,8 @@ optimWizard <- function(X, y, postproc, predictionTest, cvsegments){
     used[nAlgs] <<- 1
     groups[[nAlgs]] <<- ggroup(horizontal=FALSE)
     rGroups[[nAlgs]] <<- ggroup(horizontal=TRUE)
-    name <- names(bA)[nm]
+#    name <- names(bA)[nm]
+	name <- nm
     nameLong <- bA[[name]]@description
     method[[nAlgs]] <<- name
     
@@ -124,25 +126,25 @@ optimWizard <- function(X, y, postproc, predictionTest, cvsegments){
     for(i in 1:lns)
       addParameterGroup(nameStrs[i],i)
     parameterGroup[[nAlgs]][lns+2,2] <- gbutton("Collect", handler = function(h,...){
-      if(exists(".baseline.current")){
-        if(.baseline.current$method == name){
+#      if(exists("baseline.current")){
+        if(getBaselineEnv("baseline.current")$method == name){
           for(i in 1:lns){
-            svalue(parameterList[[nAlgs]][[i]][[1]]) <- .baseline.current$parValues[i]
+            svalue(parameterList[[nAlgs]][[i]][[1]]) <- getBaselineEnv("baseline.current")$parValues[i]
           }
         } else {
-          gmessage(paste("'.baseline.current$method' is not equal to '", name, "'", sep=""), title="Sequence", icon = "warning")
+          gmessage(paste("'baseline.current$method' is not equal to '", name, "'", sep=""), title="Sequence", icon = "warning")
         }
-      } else {
-        gmessage("'.baseline.current' not found", title="Sequence", icon = "warning")
-      }
+#      } else {
+#        gmessage("'baseline.current' not found", title="Sequence", icon = "warning")
+#      }
     })
     parameterGroup[[nAlgs]][lns+2,3] <- gbutton("Collect", handler = function(h,...){
-      if(.baseline.current$method == name){
+      if(getBaselineEnv("baseline.current")$method == name){
         for(i in 1:lns){
-          svalue(parameterList[[nAlgs]][[i]][[2]]) <- .baseline.current$parValues[i]
+          svalue(parameterList[[nAlgs]][[i]][[2]]) <- getBaselineEnv("baseline.current")$parValues[i]
         }
       } else {
-        gmessage(paste("'.baseline.current$method' is not equal to '", name, "'", sep=""), title="Sequence", icon = "warning")
+        gmessage(paste("'baseline.current$method' is not equal to '", name, "'", sep=""), title="Sequence", icon = "warning")
       }
     })
     parameterGroup[[nAlgs]][lns+2,4] <- glabel("<- from current algorithm in baselineGUI")
@@ -163,9 +165,13 @@ optimWizard <- function(X, y, postproc, predictionTest, cvsegments){
   }
   
   # Droplists for adding a baseline correction method and choosing post processing
-  methodChooser <- gdroplist(c("-> Choose additional algorithm","Asymmetric Least Squares (als)", "Fill peaks (fillPeaks)", "Iterative restricted least squares (irls)",
-                               "Local medians (medianWindow)", "Iterative polynomial fitting (modpolyfit)", "Peak Detection (peakDetection)", "Robust baseline estimation (rfbaseline)", "Rolling ball (rollingBall)"),
-                             selected=1, handler = function(h,...){if(svalue(methodChooser,index=TRUE)>1) addAlg(svalue(methodChooser,index=TRUE)-1); svalue(methodChooser,index=TRUE)<-1})
+  namesG <- character(length(GUI.names)+1)
+  namesG[1] <- '-> Choose method for optimisation'
+  for(i in 1:length(GUI.names)){ # Let bAGUI control, and bA have descriptions -------------
+    namesG[i+1] <- paste("'", ifelse(is.null(bA[[GUI.names[i]]]@description),"",bA[[GUI.names[i]]]@description), " (", GUI.names[i], ")'", sep="")
+  }
+  methodChooser <- gdroplist(namesG,
+                             selected=1, handler = function(h,...){if(svalue(methodChooser,index=TRUE)>1) addAlg(GUI.names[svalue(methodChooser,index=TRUE)-1]); svalue(methodChooser,index=TRUE)<-1})
   postChooser <- gdroplist(c("None","Norm (L2)", "Mean", "Median",
                              "Sum", "Sum of squares", "L1 postproc", "Maximum"),	selected=1)
   regChosen <- FALSE
@@ -375,17 +381,17 @@ optimWizard <- function(X, y, postproc, predictionTest, cvsegments){
     }
   })
   saveButton <- gbutton("Save setup", handler = function(h,...){
-    assign("baseline.bltests", bltest, .GlobalEnv)
-    assign("baseline.predictionTest", predictionTest, .GlobalEnv)
-    assign("baseline.postproc", postproc, .GlobalEnv)
-    cat(paste("# To run optimization later:\noptimRes <- doOptim(baseline.bltests, X, y, baseline.predictionTest,\n        postproc = baseline.postproc, verbose =", svalue(verbCheck), ", cleanTmp = TRUE)\n"))
+    putBaselineEnv("bltests", bltest)
+    putBaselineEnv("predictionTest", predictionTest)
+    putBaselineEnv("postproc", postproc)
+    cat(paste("\n# To run optimization later:\nopts <- getOptim()\noptimRes <- doOptim(opts$bltests, X, y, opts$predictionTest,\n        postproc = opts$postproc, verbose =", svalue(verbCheck), ", cleanTmp = TRUE)\n"))
   })
   startButton <- gbutton("START", handler = function(h,...){
     # Run optimisation
-    assign("optimRes", doOptim(bltest, X, y, predictionTest,
+    putBaselineEnv("optimRes", doOptim(bltest, X, y, predictionTest,
                                postproc = postproc, verbose = svalue(verbCheck),
-                               cleanTmp = TRUE),
-           .GlobalEnv)
+                               cleanTmp = TRUE))
+	cat("# To retrieve optimisation results later:\nmyResults <- getOptimRes()")
   })
   enabled(saveButton) <- FALSE
   enabled(startButton) <- FALSE
@@ -426,4 +432,13 @@ optimWizard <- function(X, y, postproc, predictionTest, cvsegments){
   add(nb, sGroup, label="Settings")
   add(main,nb,expand=TRUE)
   # add(main,gstatusbar("Tester statusbar"))
+}
+
+getOptim <- function(){
+	list(bltests        = getBaselineEnv("bltests"),
+		 predictionTest = getBaselineEnv("predictionTest"),
+		 postproc       = getBaselineEnv("postproc"))
+}
+getOptimRes <- function(){
+	getBaselineEnv("optimRes")
 }

@@ -1,4 +1,4 @@
-%%% $Id: predictionTest-class.Rd 163 2011-01-03 17:27:46Z bhm $
+%%% $Id: predictionTest-class.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{predictionTest-class}
 \Rdversion{1.1}
 \docType{class}
@@ -13,7 +13,7 @@
 \section{Methods}{
 No methods defined with class "predictionTest" in the signature.
 }
-\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
+\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
 \seealso{Subclasses \code{\linkS4class{PLSRTest}} and
   \code{\linkS4class{ridgeRegressionTest}}.
 }

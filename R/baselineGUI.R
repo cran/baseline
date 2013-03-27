@@ -1,4 +1,4 @@
-### $Id: baselineGUI.R 192 2012-06-19 08:36:53Z kristl $
+### $Id: baselineGUI.R 193 2012-06-24 21:13:42Z kristl $
 
 ## Baseline parameters, expandable list
 baselineAlgorithmsGUI <- list()
@@ -84,8 +84,9 @@ baselineGUI <- function(spectra, method='irls', labels, rev.x=FALSE){
     command <- paste(command, ", method='", method, "')", sep="")
     eval(parse(text=command))
     ## Kludge to aviod warnings from R CMD check:
-    assign("baseline.result", spec, .GlobalEnv)
-    .baseline.current <<- list(method=method, parNames=rownames(bAGUI[[method]]), parValues=bAGUI[[method]]$current)
+    # assign("baseline.result", spec, .GlobalEnv)
+	putBaselineEnv("baseline.result", spec)
+    putBaselineEnv("baseline.current", list(method=method, parNames=rownames(bAGUI[[method]]), parValues=bAGUI[[method]]$current))
     updatePlot()
   }                                   # end of baseline.compute
   
@@ -108,7 +109,7 @@ baselineGUI <- function(spectra, method='irls', labels, rev.x=FALSE){
   ## Update plot
   updatePlot <- function() {
     ## FIXME: get is a kludge to avoid warnings from R CMD check:
-    plot(get("baseline.result", .GlobalEnv), grid = gridOn, labels = labels, rev.x = rev.x,
+    plot(getBaselineEnv("baseline.result"), grid = gridOn, labels = labels, rev.x = rev.x,
          zoom = list(xz = xz, yz = yz, xc = xc, yc = yc))
   }                                   # end of updatePlot
   
@@ -164,7 +165,10 @@ baselineGUI <- function(spectra, method='irls', labels, rev.x=FALSE){
     eval(parse(text=command))
     
     exportName <- gedit(text="corrected.spectra", width=20)
-    doExport   <- gbutton(text = "Apply and export", handler = function(h,...){the.name <- svalue(exportName); cat("\nCorrecting ..."); the.export <- spec; assign(the.name, the.export,envir = .GlobalEnv);dispose(exportWindow);cat("\nSaved as: ",the.name, sep="")})
+    doExport   <- gbutton(text = "Apply and export", handler = function(h,...){the.name <- svalue(exportName); cat("\nCorrecting ..."); putBaselineEnv('the.export', spec);
+	eval(parse(text = paste(the.name, ' <- getBaselineEnv("the.export")', sep="")),envir = .GlobalEnv)
+	#assign(the.name, the.export,envir = .GlobalEnv);
+	dispose(exportWindow);cat("\nSaved as: ",the.name, sep="")})
     exportWindow <- gwindow("Apply correction to all spectra", width=300)
     superGroup   <- ggroup(horizontal=FALSE,container=exportWindow)
     subgroup     <- gframe("Object name",horizontal=FALSE)
@@ -264,7 +268,7 @@ baselineGUI <- function(spectra, method='irls', labels, rev.x=FALSE){
     iI <<- dim(sVals)[1]
     for(i in 1:iI){
       sliders[[i]] <<- gslider(from=sVals[i,1], to=sVals[i,2], by=sVals[i,3], value=bAGUI[[method]]$current[i],
-                              handler = function(h,...){ for(a in 1:iI){bAGUI[[method]]$current[a] <<- svalue(sliders[[a]]); .baseline.current$parValues[a] <<- svalue(sliders[[a]])}})
+                              handler = function(h,...){ for(a in 1:iI){bAGUI[[method]]$current[a] <<- svalue(sliders[[a]]); bc <- getBaselineEnv("baseline.current");bc$parValues[a] <- svalue(sliders[[a]]);setBaselineEnv("baseline.current",bc)}})
       resets[[i]]  <<- gbutton(text = "Reset", handler = function(h,...){for(a in 1:iI) svalue(sliders[[a]])<<-sVals[a,4]})
       tmps[[i]]    <<- gframe(paste(sVals[i,6], " (", rownames(sVals)[i], ")", sep=""), container=remParam, horizontal=TRUE)
       add(tmps[[i]], sliders[[i]], expand=TRUE); add(tmps[[i]], resets[[i]], expand=FALSE)
@@ -286,13 +290,13 @@ baselineGUI <- function(spectra, method='irls', labels, rev.x=FALSE){
   } else {
     bA <- baselineAlgorithms
   }
-  tmp <- sort(names(bAGUI))
-  names <- character(length(tmp))
-  for(i in 1:length(tmp)){ # Let bAGUI control, and bA have descriptions -------------
-    names[i] <- paste("'", ifelse(is.null(bA[[tmp[i]]]@description),"",bA[[tmp[i]]]@description), " (", tmp[i], ")'", sep="")
+  GUI.names <- sort(names(bAGUI))
+  names <- character(length(GUI.names))
+  for(i in 1:length(GUI.names)){ # Let bAGUI control, and bA have descriptions -------------
+    names[i] <- paste("'", ifelse(is.null(bA[[GUI.names[i]]]@description),"",bA[[GUI.names[i]]]@description), " (", GUI.names[i], ")'", sep="")
   }
   methodChooser <- gdroplist(names,
-                             selected=which(names(bA)==method), handler = function(h,...){method <<- names(bA)[svalue(methodChooser,index=TRUE)]; delete(outerParam,remParam); createMethodSliders(); setZoom(); baseline.compute()})
+                             selected=which(GUI.names==method), handler = function(h,...){method <<- GUI.names[svalue(methodChooser,index=TRUE)]; delete(outerParam,remParam); createMethodSliders(); setZoom(); baseline.compute()})
   
   ## Initialize window and main containers
   window <- gwindow("Baseline correction", width=300)

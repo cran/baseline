@@ -1,4 +1,4 @@
-%%% $Id: baselineAlgTest-class.Rd 179 2011-01-09 14:29:07Z bhm $
+%%% $Id: baselineAlgTest-class.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{baselineAlgTest-class}
 \Rdversion{1.1}
 \docType{class}
@@ -36,7 +36,7 @@ Objects can be created by calls of the form \code{new("baselineAlgTest", ...)}.
       test.}
   }
 }
-\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
+\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
 \seealso{
   Classes \code{\linkS4class{baselineAlg}},
   \code{\linkS4class{baselineAlgResult}}.  Function \code{runTest}.

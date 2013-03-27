@@ -1,4 +1,4 @@
-%%% $Id: param.ind.min.Rd 179 2011-01-09 14:29:07Z bhm $
+%%% $Id: param.ind.min.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{param.ind.min}
 \alias{param.ind.min}
 \alias{param.ind.min-methods}
@@ -23,7 +23,7 @@ qualMeas.ind.min(object)
 \value{
   The corresponding slot
 }
-\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
+\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
 \seealso{
   Class \code{\linkS4class{baselineAlgResult}}
 }

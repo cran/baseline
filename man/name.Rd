@@ -1,4 +1,4 @@
-%%% $Id: name.Rd 165 2011-01-03 18:07:46Z bhm $
+%%% $Id: name.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{name}
 \alias{name}
 \alias{name-methods}
@@ -18,7 +18,7 @@ description(object)
 \value{
   The methods return the corresponding slot of the object.
 }
-\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
+\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
 \seealso{
   \code{\linkS4class{baselineAlg}}, \code{\link{funcName}}.
 }

@@ -1,4 +1,4 @@
-%%% $Id: baseline-package.Rd 185 2011-01-09 22:05:50Z kristl $
+%%% $Id: baseline-package.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{baseline-package}
 \alias{baseline-package}
 \docType{package}
@@ -12,8 +12,8 @@ A common framework with implementations of several baseline correction methods
 \tabular{ll}{
 Package: \tab baseline\cr
 Type: \tab Package\cr
-Version: \tab 1.1-0\cr
-Date: \tab 2012-06-24\cr
+Version: \tab 1.1-1\cr
+Date: \tab 2013-03-27\cr
 License: \tab GPL-2\cr
 }
 Use function baseline for baseline correction. This function takes matrices of
@@ -21,7 +21,7 @@ spectra, a method name and parameters needed for the specific method. See
 helpfiles for details.
 }
 \author{
-Kristian Hovde Liland and BjÃ¸rn-Helge Mevik
+Kristian Hovde Liland and Bjørn-Helge Mevik
 
 Maintainer: Kristian Hovde Liland <kristian.liland@umb.no>
 }
@@ -40,7 +40,7 @@ AHMET K. ATAKAN, W. E. BLASS, and D. E. JENNINGS:
 M.A. Kneen, H.J. Annegarn:
   Algorithm for fitting XRF, SEM and PIXE X-ray spectra backgrounds;
 K.H. Liland, B.-H. Mevik, E.-O. Rukke, T.
-  AlmÃ¸y, M. Skaugen and T. Isaksson (2009)
+  Almøy, M. Skaugen and T. Isaksson (2009)
   Quantitative whole spectrum analysis with MALDI-TOF MS, Part I:
   Measurement optimisation.
   \emph{Chemometrics and Intelligent Laboratory Systems}, \bold{96}(2),

@@ -1,4 +1,4 @@
-%%% $Id: param.Rd 165 2011-01-03 18:07:46Z bhm $
+%%% $Id: param.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{param}
 \alias{param}
 \alias{param-methods}
@@ -22,7 +22,7 @@ param(object)
 \value{
   The \code{param} slot of the object.  Usually a data frame, list or numeric.
 }
-\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
+\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
 \seealso{
   Classes \code{\linkS4class{baselineAlg}},
   \code{\linkS4class{baselineAlgTest}},

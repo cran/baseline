@@ -1,4 +1,4 @@
-%%% $Id: PLSRTest-class.Rd 165 2011-01-03 18:07:46Z bhm $
+%%% $Id: PLSRTest-class.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{PLSRTest-class}
 \Rdversion{1.1}
 \docType{class}
@@ -29,7 +29,7 @@ Class \code{\linkS4class{predictionTest}}, directly.
     \item{runTest}{\code{signature(object = "PLSRTest")}: Run the test}
   }
 }
-\author{BjÃ¸rn-Helge Mevik and Krisitan Hovde Liland}
+\author{Bjørn-Helge Mevik and Krisitan Hovde Liland}
 \seealso{
   The base class \code{\linkS4class{predictionTest}}.  The
   \code{\link{runTest}} function.  The \code{\link[pls:mvr]{plsr}}

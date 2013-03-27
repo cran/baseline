@@ -1,4 +1,4 @@
-%%% $Id: plotOptim.Rd 175 2011-01-07 09:12:32Z kristl $
+%%% $Id: plotOptim.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{plotOptim}
 \alias{plotOptim}
 
@@ -24,6 +24,6 @@ plotOptim(results)
   or levels corresponding to the minimum when averaging over selected
   values of the regression parameter, e.g. selected components in PLSR.
 }
-\author{ Kristian Hovde Liland and BjÃ¸rn-Helge Mevik }
+\author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
 \keyword{ baseline }
 \keyword{ spectra }

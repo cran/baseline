@@ -1,13 +1,18 @@
-%%% $Id: optimWizard.Rd 169 2011-01-03 20:24:13Z bhm $
+%%% $Id: optimWizard.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{optimWizard}
 \alias{optimWizard}
+\alias{getOptim}
+\alias{getOptimRes}
 
 \title{ Visual tool for setting up optimization }
 \description{
-  Set up optimization through a graphical user interface. Optionally collecting values directly from 'baselineGUI'
+  Set up optimization through a graphical user interface. Optionally collecting values directly from 'baselineGUI'.
+  Retrieve optimisation parameters and results with \code{getOptim} and \code{getOptimRes}, respectively.
 }
 \usage{
 optimWizard(X, y, postproc, predictionTest, cvsegments)
+getOptim()
+getOptimRes()
 }
 \arguments{
   \item{X}{ Matrix with spectra in rows }
@@ -16,7 +21,7 @@ optimWizard(X, y, postproc, predictionTest, cvsegments)
   \item{predictionTest}{ Custom prediction object (optional) }
   \item{cvsegments}{ Cross-validation segments (optional)}
 }
-\author{ Kristian Hovde Liland and BjÃ¸rn-Helge Mevik }
+\author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
 \examples{
 \dontrun{
 data(milk)

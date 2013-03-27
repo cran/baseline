@@ -1,4 +1,4 @@
-%%% $Id: baseline.peakDetection.Rd 185 2011-01-09 22:05:50Z kristl $
+%%% $Id: baseline.peakDetection.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{baseline.peakDetection}
 \alias{baseline.peakDetection}
 
@@ -40,7 +40,7 @@ mono=0, multiplier=5, left.right, lwin.rwin)
 \references{ KEVIN R. COOMBES et al.:
   Quality control and peak finding for proteomics data collected from nipple aspirate fluid
   by surface-enhanced laser desorption and ionization. }
-\author{ Kristian Hovde Liland and BjÃ¸rn-Helge Mevik }
+\author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
 \examples{
 data(milk)
 bc.peakDetection <- baseline(milk$spectra[1,, drop=FALSE], method='peakDetection',

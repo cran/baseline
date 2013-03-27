@@ -1,4 +1,4 @@
-%%% $Id: qualMeas.Rd 185 2011-01-09 22:05:50Z kristl $
+%%% $Id: qualMeas.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{qualMeas}
 \alias{qualMeas}
 \alias{qualMeas-methods}
@@ -67,7 +67,7 @@ qualMeasName(object)
   the subsets or minimum values of the \code{qualMeas} slot of the object as specified
   above. All other methods simply return the corresponding slot.
 }
-\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
+\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
 
 \seealso{
   Function \code{\link{runTest}}, classes

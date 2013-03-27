@@ -1,4 +1,4 @@
-%%% $Id: predictionResult-class.Rd 163 2011-01-03 17:27:46Z bhm $
+%%% $Id: predictionResult-class.Rd 193 2012-06-24 21:13:42Z kristl $
 \name{predictionResult-class}
 \Rdversion{1.1}
 \docType{class}
@@ -40,7 +40,7 @@
     \item{qualMeasName}{\code{signature(object = "predictionResult")}: Extract the \code{qualMeasName} slot}
 	 }
 }
-\author{BjÃ¸rn-Helge Mevik and Kristian Hovde Liland}
+\author{Bjørn-Helge Mevik and Kristian Hovde Liland}
 \seealso{
   Function \code{\link{runTest}}, class
   \code{\linkS4class{predictionTest}}, subclasses 
