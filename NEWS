@@ -2,6 +2,10 @@ NEWS file for package baseline
 Collection of baseline correction algorithms, along with a framework and a GUI for optimising baseline algorithm parameters.
 Kristian Hovde Liland and Bjørn-Helge Mevik, Norway
 
+##### Version 1.1-2
+Date: 02 May 2013
+>> Fixed bug in environment setting (tip from Tom Wenseleers).
+
 ##### Version 1.1-1
 Date: 27 March 2013
 >> Fixed bug concerning naming of methods in the user interfaces (tip from Tom Wenseleers).

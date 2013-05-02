@@ -268,7 +268,7 @@ baselineGUI <- function(spectra, method='irls', labels, rev.x=FALSE){
     iI <<- dim(sVals)[1]
     for(i in 1:iI){
       sliders[[i]] <<- gslider(from=sVals[i,1], to=sVals[i,2], by=sVals[i,3], value=bAGUI[[method]]$current[i],
-                              handler = function(h,...){ for(a in 1:iI){bAGUI[[method]]$current[a] <<- svalue(sliders[[a]]); bc <- getBaselineEnv("baseline.current");bc$parValues[a] <- svalue(sliders[[a]]);setBaselineEnv("baseline.current",bc)}})
+                              handler = function(h,...){ for(a in 1:iI){bAGUI[[method]]$current[a] <<- svalue(sliders[[a]]); bc <- getBaselineEnv("baseline.current");bc$parValues[a] <- svalue(sliders[[a]]);putBaselineEnv("baseline.current",bc)}})
       resets[[i]]  <<- gbutton(text = "Reset", handler = function(h,...){for(a in 1:iI) svalue(sliders[[a]])<<-sVals[a,4]})
       tmps[[i]]    <<- gframe(paste(sVals[i,6], " (", rownames(sVals)[i], ")", sep=""), container=remParam, horizontal=TRUE)
       add(tmps[[i]], sliders[[i]], expand=TRUE); add(tmps[[i]], resets[[i]], expand=FALSE)
