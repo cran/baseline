@@ -1,5 +1,5 @@
-9ef6ceb4219cd777775ce4b4ab258119 *DESCRIPTION
-68bb55f121a72adfbd5f2ccdbcdcd2e0 *NAMESPACE
+7ace2aa0542d1ab1ee6424c42cc96bac *DESCRIPTION
+2158cfc3e5929c94e586dd6c9d6c47d8 *NAMESPACE
 cd96ae70b0d501d4727c09907ab99431 *NEWS
 eabb8f1bf16e7e1593cb631d0aed33dd *R/aaa.R
 d6fb714006549dbc18be13e632eef840 *R/baseline.R
@@ -39,15 +39,15 @@ b201ab008479e13e75f23fb9908825f4 *man/baselineAlg-class.Rd
 823e321b6f6ea42dd0bc0bd1ac24c434 *man/baselineAlgResult-class.Rd
 752758634e36b8141ae6e61e1df139d9 *man/baselineAlgTest-class.Rd
 4f5a55b61f90e8cb3f2224873b0127b3 *man/baselineAlgorithms.Rd
-2aa876df6f5380c38acc65884eaec412 *man/baselineAlgorithmsGUI.Rd
+11dc1060e1fd69de7543f633e3e81aa4 *man/baselineAlgorithmsGUI.Rd
 a013d09df47721b57e04e6f42fbb53b3 *man/baselineEnv.Rd
 29c236e555f90afac8b0f688bfd71035 *man/baselineGUI.Rd
-4346bb38ced95af560339319c9b3b8ee *man/custom.baseline.Rd
+a50b08cd3b177793aa5f76e82960e58e *man/custom.baseline.Rd
 ea2024906dd4133bcca6abf44118afc8 *man/doOptim.Rd
 9fd57baff4ea226a898a0b2b4aca690d *man/funcName.Rd
 daa457a3ea4c9a44f1e466a067a0db11 *man/getBaseline.Rd
 e5bbdabba12988d23dbebc339408447d *man/ind.min.Rd
-2ae09bd17028f767ceb3824c9f8b852b *man/milk.Rd
+cf658729fe4268d8ffa3c8739a2f6e8d *man/milk.Rd
 4a6705906f9978e7facc5b567250e881 *man/name.Rd
 4b4f6818631701bce9462a2c8fce668a *man/optimWizard.Rd
 706331d5f2d230d9334504cc520640f0 *man/overall.min.Rd

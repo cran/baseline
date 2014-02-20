@@ -1,4 +1,5 @@
 importFrom(graphics, plot)
+importFrom(methods, setGeneric)
 import(SparseM)
 exportPattern("^[^\\.]") # Export all except .functions
 exportClassPattern("^[^\\.]") # Export all S4 classes # baseline, predictorTest, predictorResult, PLSRTest, ridgeRegressionTest, baselineAlg, baselineAlgTest, baselineAlgResult)
