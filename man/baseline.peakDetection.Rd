@@ -45,7 +45,9 @@ mono=0, multiplier=5, left.right, lwin.rwin)
 data(milk)
 bc.peakDetection <- baseline(milk$spectra[1,, drop=FALSE], method='peakDetection',
 	left=300, right=300, lwin=50, rwin=50)
-plot(bc.peakDetection)
+\dontrun{
+	plot(bc.peakDetection)
+}
 }
 
 \keyword{ baseline }

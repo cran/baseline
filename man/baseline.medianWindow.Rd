@@ -30,7 +30,9 @@ baseline.medianWindow(spectra, hwm, hws, end)
 data(milk)
 bc.medianWindow <- baseline(milk$spectra[1,, drop=FALSE], hwm=300,
 	method='medianWindow')
-plot(bc.medianWindow)
+\dontrun{
+	plot(bc.medianWindow)
+}
 }
 
 \keyword{ baseline }

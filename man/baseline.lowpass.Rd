@@ -30,7 +30,9 @@ baseline.lowpass(spectra, steep = 2, half = 5)
 \examples{
 data(milk)
 bc.lowpass <- baseline(milk$spectra[1,, drop=FALSE], method='lowpass')
-plot(bc.lowpass)
+\dontrun{
+	plot(bc.lowpass)
+}
 }
 \keyword{ baseline }
 \keyword{ spectra }

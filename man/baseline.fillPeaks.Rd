@@ -11,7 +11,7 @@ baseline.fillPeaks(spectra, lambda, hwi, it, int)
 }
 \arguments{
   \item{spectra}{ Matrix with spectra in rows }
-  \item{lambda}{ 2nd derivative constraint for primary smoothing}
+  \item{lambda}{ 2nd derivative penalty for primary smoothing}
   \item{hwi}{ Half width of local windows }
   \item{it}{ Number of iterations in suppression loop }
   \item{int}{ Number of buckets to divide spectra into }
@@ -29,7 +29,9 @@ baseline.fillPeaks(spectra, lambda, hwi, it, int)
 data(milk)
 bc.fillPeaks <- baseline(milk$spectra[1,, drop=FALSE], lambda=6,
 	hwi=50, it=10, int=2000, method='fillPeaks')
-plot(bc.fillPeaks)
+\dontrun{
+	plot(bc.fillPeaks)
+}
 }
 \keyword{ baseline }
 \keyword{ spectra }

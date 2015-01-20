@@ -32,7 +32,9 @@ baseline.als(spectra, lambda = 6, p = 0.05, maxit = 20)
 \examples{
 data(milk)
 bc.als <- baseline(milk$spectra[1,, drop=FALSE], lambda=10, method='als')
+\dontrun{
 plot(bc.als)
+}
 }
 
 \keyword{ baseline }

@@ -28,6 +28,9 @@ data(milk)
 X <- milk$spectra[,-1]
 y <- milk$spectra[,1]
 optimWizard(X,y)
+
+# After optimisation is complete
+plotOptim(myResults)
 }
 }
 \keyword{ baseline }

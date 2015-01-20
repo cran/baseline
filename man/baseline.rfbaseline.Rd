@@ -42,7 +42,9 @@ baseline.rfbaseline(spectra, span = 2/3, NoXP = NULL, maxit = c(2, 2),
 data(milk)
 bc.rbe <- baseline(milk$spectra[1,, drop=FALSE], method='rfbaseline',
   span=NULL, NoXP=1000)
-plot(bc.rbe)
+\dontrun{
+	plot(bc.rbe)
+}
 }
 
 \keyword{ baseline }

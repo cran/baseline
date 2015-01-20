@@ -33,7 +33,9 @@ baseline(spectra, method = "irls", ...)
 \examples{
 data(milk)
 bc.irls <- baseline(milk$spectra[1,, drop=FALSE])
-plot(bc.irls)
+\dontrun{
+	plot(bc.irls)
+}
 }
 
 \keyword{ baseline }

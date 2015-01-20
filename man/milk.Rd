@@ -28,6 +28,8 @@
 }
 \examples{
 data(milk)
+\dontrun{
 plot(milk$spectra[1,], type = "l")
+}
 }
 \keyword{datasets}

@@ -26,7 +26,9 @@ baseline.rollingBall(spectra, wm, ws)
 data(milk)
 bc.rollingBall <- baseline(milk$spectra[1,, drop=FALSE], wm=200, ws=200,
 	method='rollingBall')
-plot(bc.rollingBall)
+\dontrun{
+	plot(bc.rollingBall)
+}
 }
 
 \keyword{ baseline }

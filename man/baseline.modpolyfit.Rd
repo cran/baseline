@@ -31,7 +31,9 @@ baseline.modpolyfit(spectra, t, degree = 4, tol = 0.001, rep = 100)
 \examples{
 data(milk)
 bc.modpolyfit <- baseline(milk$spectra[1,, drop=FALSE], method='modpolyfit', deg=6)
-plot(bc.modpolyfit)
+\dontrun{
+	plot(bc.modpolyfit)
+}
 }
 
 \keyword{ baseline }

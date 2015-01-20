@@ -26,7 +26,9 @@ baseline.irls(spectra, lambda1 = 5, lambda2 = 9, maxit = 200, wi = 0.05)
 \examples{
 data(milk)
 bc.irls <- baseline(milk$spectra[1,, drop=FALSE], method='irls')
-plot(bc.irls)
+\dontrun{
+	plot(bc.irls)
+}
 }
 \keyword{ baseline }
 \keyword{ spectra }

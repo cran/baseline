@@ -4,7 +4,8 @@
 
 \title{ Interactive plotting tool }
 \description{
-  An interactive plotting tool for dynamic visualization of baselines and their effect using gWidgets with GTK
+  An interactive plotting tool for dynamic visualization of baselines and their effect
+  using the gWidgets package with GTK+ or Tcl/Tk.
 }
 \usage{
 baselineGUI(spectra, method='irls', labels, rev.x = FALSE)
@@ -16,7 +17,10 @@ baselineGUI(spectra, method='irls', labels, rev.x = FALSE)
   \item{rev.x}{ Reverse X-axis (optional, default=FALSE)}
 }
 \details{
-  Creates and updates a list containing current baseline and spectrum (baseline.result)
+  Creates and updates a list containing current baseline and spectrum (baseline.result).
+  Make sure a gWidget implementation is available, e.g gWidgetsRGtk2 or gWidgetstcltk
+  and a corresponding backend like GTK+ or Tcl/Tk. The GUI was developed using GTK which
+  is an external dependency in Windows ans OS X.
 }
 \author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
 \examples{

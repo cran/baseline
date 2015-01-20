@@ -53,8 +53,9 @@ plotBaseline(x, y, specNo = 1, grid = FALSE, labels = 1:n, rev.x = FALSE,
 \examples{
 data(milk)
 bl <- baseline(milk$spectra[1,, drop=FALSE])
+\dontrun{
 plot(bl)
-\dontrun{plot(bl, zoom = TRUE)}
+plot(bl, zoom = TRUE)}
 }
 \keyword{baseline}
 \keyword{plot}

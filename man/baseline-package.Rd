@@ -12,8 +12,8 @@ A common framework with implementations of several baseline correction methods
 \tabular{ll}{
 Package: \tab baseline\cr
 Type: \tab Package\cr
-Version: \tab 1.1-1\cr
-Date: \tab 2013-03-27\cr
+Version: \tab 1.1-4\cr
+Date: \tab 2015-01-19\cr
 License: \tab GPL-2\cr
 }
 Use function baseline for baseline correction. This function takes matrices of
@@ -51,5 +51,7 @@ K.H. Liland, B.-H. Mevik, E.-O. Rukke, T.
 \examples{
 data(milk)
 bc.irls <- baseline(milk$spectra[1,, drop=FALSE])
-plot(bc.irls)
+\dontrun{
+	plot(bc.irls)
+}
 }
