@@ -12,8 +12,8 @@ A common framework with implementations of several baseline correction methods
 \tabular{ll}{
 Package: \tab baseline\cr
 Type: \tab Package\cr
-Version: \tab 1.1-4\cr
-Date: \tab 2015-01-19\cr
+Version: \tab 1.2-0\cr
+Date: \tab 2015-03-11\cr
 License: \tab GPL-2\cr
 }
 Use function baseline for baseline correction. This function takes matrices of
@@ -23,7 +23,7 @@ helpfiles for details.
 \author{
 Kristian Hovde Liland and Bjørn-Helge Mevik
 
-Maintainer: Kristian Hovde Liland <kristian.liland@umb.no>
+Maintainer: Kristian Hovde Liland <kristian.liland@nmbu.no>
 }
 \references{
 Andreas F. Ruckstuhl, Matthew P. Jacobson, Robert W. Field,

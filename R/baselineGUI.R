@@ -34,6 +34,10 @@ baselineAlgorithmsGUI$rfbaseline		 	<- as.data.frame(matrix(c(100,5000,10,1000, 
 dimnames(baselineAlgorithmsGUI$rfbaseline)	<- list(par=c("NoXP", "b"),val=c("min","max","step","default"))
 baselineAlgorithmsGUI$rfbaseline$current	<- c(1000,3.5)
 baselineAlgorithmsGUI$rfbaseline$name		<- c("Number of regression points", "Relative weighting")
+baselineAlgorithmsGUI$shirley			 	<- as.data.frame(matrix(c(10,1000,10,50, 1e-7,1e-5,1e-7,1e-6), 2,4, byrow=TRUE))
+dimnames(baselineAlgorithmsGUI$shirley)		<- list(par=c("maxit", "err"),val=c("min","max","step","default"))
+baselineAlgorithmsGUI$shirley$current		<- c(50,1e-6)
+baselineAlgorithmsGUI$shirley$name			<- c("Max #iterations", "Error")
 
 baselineGUI <- function(spectra, method='irls', labels, rev.x=FALSE){
   if(requireNamespace("gWidgets", quietly = TRUE)){

@@ -25,7 +25,10 @@ baselineGUI(spectra, method='irls', labels, rev.x = FALSE)
 \author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
 \examples{
 data(milk)
-\dontrun{baselineGUI(milk$spectra)}
+\dontrun{
+# Dependent on external software
+baselineGUI(milk$spectra)
+}
 }
 \keyword{ baseline }
 \keyword{ spectra }

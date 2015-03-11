@@ -27,7 +27,8 @@ baseline(spectra, method = "irls", ...)
   \code{\link{baseline.medianWindow}},
   \code{\link{baseline.modpolyfit}},
   \code{\link{baseline.peakDetection}},
-  \code{\link{baseline.rfbaseline}}, \code{\link{baseline.rollingBall}}
+  \code{\link{baseline.rfbaseline}}, \code{\link{baseline.rollingBall}},
+  \code{\link{baseline.shirley}}
 }
 \author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
 \examples{

@@ -13,7 +13,7 @@ baseline.modpolyfit <- function(spectra, t, degree = 4, tol = 1e-3, rep = 100) {
 
     ## The scaling of 1 here is so crossprod(polx) == diag(degree + 1),
     ## which makes the linear regressions below very simple:
-    polx <- cbind(1/sqrt(np[2]), poly(t, degree = degree))
+    polx <- cbind(1/sqrt(np[2]), stats::poly(t, degree = degree))
 
     for(i in 1:np[1]){
         ywork <- yold <- yorig <- spectra[i,]
