@@ -24,6 +24,7 @@ getOptimRes()
 \author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
 \examples{
 \dontrun{
+# Computationally intensive
 data(milk)
 X <- milk$spectra[,-1]
 y <- milk$spectra[,1]

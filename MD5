@@ -1,5 +1,5 @@
-ced16e864e57687cbbc9e1ec22d47c28 *DESCRIPTION
-2158cfc3e5929c94e586dd6c9d6c47d8 *NAMESPACE
+c565f5e0d6a58600dd54167096f7ff20 *DESCRIPTION
+5bad3e76896d0ae7173284fd71766d26 *NAMESPACE
 c16e8888a86240cd688e12c268f47910 *NEWS
 eabb8f1bf16e7e1593cb631d0aed33dd *R/aaa.R
 d6fb714006549dbc18be13e632eef840 *R/baseline.R
@@ -28,8 +28,8 @@ e4f4c33335f56e474a803d40d0d526de *man/PLSRTest-class.Rd
 9fa754c0665d3634caaa9b581af83bc7 *man/XPSdata.Rd
 cf5d6fa04b1bd0cc1db7ce259dbda2fd *man/algorithm.Rd
 15249c4548966476015bfa60162ad578 *man/baseline-class.Rd
-141e8ea5c7febd802b877ba8e9917265 *man/baseline-package.Rd
-d56f2497dc34adbd72d98dc5123cb22b *man/baseline.Rd
+e4d5b319d3435f218d6651ad88ce36a3 *man/baseline-package.Rd
+e497150c8207fb4a0edef5096cc0e100 *man/baseline.Rd
 b5a211af2133c502361337796d01cd50 *man/baseline.als.Rd
 095d3ee63fca4c2f2153134286572518 *man/baseline.fillPeaks.Rd
 f0133f8a5e3f5e74d9bf830fd6c7b2cd *man/baseline.irls.Rd
@@ -50,15 +50,15 @@ d438fae6a474c93d1b7f1997d75aea3f *man/baselineGUI.Rd
 1c43b9338ed11e804e7e126198b7377f *man/custom.baseline.Rd
 f0e2da5c0b2e2f06959828aaeaf62de1 *man/doOptim.Rd
 9fd57baff4ea226a898a0b2b4aca690d *man/funcName.Rd
-daa457a3ea4c9a44f1e466a067a0db11 *man/getBaseline.Rd
+088db711a201f1380520d8596338ee90 *man/getBaseline.Rd
 e5bbdabba12988d23dbebc339408447d *man/ind.min.Rd
 c761dc6fe1fb9d95d409c2f9a0cad138 *man/milk.Rd
 4a6705906f9978e7facc5b567250e881 *man/name.Rd
-6c6f9022041f337ffa4da62aa09a7077 *man/optimWizard.Rd
+eeba3b195d5350a4035e38b4f0a1cf2e *man/optimWizard.Rd
 706331d5f2d230d9334504cc520640f0 *man/overall.min.Rd
 10f46979f1c0946ebc8f00745b71a765 *man/param.Rd
 a5d8df5d7486e8920371c2211560fa76 *man/param.ind.min.Rd
-790c56059a60ca990835a134de46dd70 *man/plotBaseline.Rd
+fe7f24be6c9e786aaaa7b755f7ee68f5 *man/plotBaseline.Rd
 581ff152648b0246aab6076a06a6c89f *man/plotOptim.Rd
 92ae55f2a64788ee9ad89a65c6f1547c *man/predictionResult-class.Rd
 05bd34487dcf1dc061fb63588a00f663 *man/predictionTest-class.Rd

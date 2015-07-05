@@ -39,10 +39,10 @@ getCall(object)
 \examples{
 data(milk)
 bl <- baseline(milk$spectra[1:2,])
-getBaseline(bl)
-getSpectra(bl)
-getCorrected(bl)
-getCall(bl)
+baseline  <- getBaseline(bl)
+spectra   <- getSpectra(bl)
+corrected <- getCorrected(bl)
+call      <- getCall(bl)
 }
 \keyword{ spectra }
 \keyword{ baseline }

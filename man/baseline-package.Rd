@@ -12,8 +12,8 @@ A common framework with implementations of several baseline correction methods
 \tabular{ll}{
 Package: \tab baseline\cr
 Type: \tab Package\cr
-Version: \tab 1.2-0\cr
-Date: \tab 2015-03-11\cr
+Version: \tab 1.2-1\cr
+Date: \tab 2015-07-05\cr
 License: \tab GPL-2\cr
 }
 Use function baseline for baseline correction. This function takes matrices of
@@ -49,9 +49,37 @@ K.H. Liland, B.-H. Mevik, E.-O. Rukke, T.
 \keyword{ baseline }
 \keyword{ spectra }
 \examples{
+# Load data
 data(milk)
+# The baseline() function is an S4 wrapper for all the different 
+# baseline correction methods. The default correction method
+# is IRLS. Data must be organized as row vectors in a matrix
+# or data.frame.
 bc.irls <- baseline(milk$spectra[1,, drop=FALSE])
 \dontrun{
+  # Computationally heavy
 	plot(bc.irls)
+}
+
+# Available extractors are:
+# getBaseline(bc.irls)
+# getSpectra(bc.irls)
+# getCorrected(bc.irls)
+# getCall(bc.irls)
+
+# Correction methods and parameters can be specified through the wrapper.
+bc.fillPeaks <- baseline(milk$spectra[1,, drop=FALSE], lambda=6,
+	hwi=50, it=10, int=2000, method='fillPeaks')
+\dontrun{
+  # Computationally heavy
+	plot(bc.fillPeaks)
+}
+
+# If a suitable gWidgets implementation is installed, a 
+# graphical user interface is available for interactive
+# parameter adaption.
+\dontrun{
+  # Dependent on external software
+  baselineGUI(milk$spectra)
 }
 }

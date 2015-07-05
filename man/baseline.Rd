@@ -32,10 +32,38 @@ baseline(spectra, method = "irls", ...)
 }
 \author{ Kristian Hovde Liland and Bjørn-Helge Mevik }
 \examples{
+# Load data
 data(milk)
+# The baseline() function is an S4 wrapper for all the different 
+# baseline correction methods. The default correction method
+# is IRLS. Data must be organized as row vectors in a matrix
+# or data.frame.
 bc.irls <- baseline(milk$spectra[1,, drop=FALSE])
 \dontrun{
+  # Computationally heavy
 	plot(bc.irls)
+}
+
+# Available extractors are:
+# getBaseline(bc.irls)
+# getSpectra(bc.irls)
+# getCorrected(bc.irls)
+# getCall(bc.irls)
+
+# Correction methods and parameters can be specified through the wrapper.
+bc.fillPeaks <- baseline(milk$spectra[1,, drop=FALSE], lambda=6,
+	hwi=50, it=10, int=2000, method='fillPeaks')
+\dontrun{
+  # Computationally heavy
+	plot(bc.fillPeaks)
+}
+
+# If a suitable gWidgets implementation is installed, a 
+# graphical user interface is available for interactive
+# parameter adaption.
+\dontrun{
+  # Dependent on external software
+  baselineGUI(milk$spectra)
 }
 }
 

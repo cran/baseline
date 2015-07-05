@@ -54,8 +54,9 @@ plotBaseline(x, y, specNo = 1, grid = FALSE, labels = 1:n, rev.x = FALSE,
 data(milk)
 bl <- baseline(milk$spectra[1,, drop=FALSE])
 \dontrun{
-plot(bl)
-plot(bl, zoom = TRUE)}
+  # Computationally intensive
+  plot(bl)
+  plot(bl, zoom = TRUE)}
 }
 \keyword{baseline}
 \keyword{plot}
