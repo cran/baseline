@@ -1,9 +1,9 @@
-Encoding: latin1
+Encoding: UTF-8
 Package: baseline
 Type: Package
 Title: Baseline Correction of Spectra
-Version: 1.2-1
-Date: 2015-07-05
+Version: 1.2-2
+Date: 2019-11-05
 Authors@R: c(person("Kristian Hovde", "Liland", role = c("aut","cre"), email="kristian.liland@nmbu.no"), person("Bjørn-Helge", "Mevik", role=c("aut")), person("Roberto", "Canteri", role=c("ctb")))
 Maintainer: Kristian Hovde Liland <kristian.liland@nmbu.no>
 Description: Collection of baseline correction algorithms, along with a framework and a GUI for optimising baseline algorithm parameters. Typical use of the package is for removing background effects from spectra originating from various types of spectroscopy and spectrometry, possibly optimizing this with regard to regression or classification results. Correction methods include polynomial fitting, weighted local smoothers and many more.
@@ -15,9 +15,9 @@ LazyLoad: true
 LazyData: true
 ZipData: true
 NeedsCompilation: no
-Packaged: 2015-07-05 15:35:37 UTC; kristian.liland
+Packaged: 2019-11-05 14:03:37 UTC; kristl
 Author: Kristian Hovde Liland [aut, cre],
   Bjørn-Helge Mevik [aut],
   Roberto Canteri [ctb]
 Repository: CRAN
-Date/Publication: 2015-07-05 23:57:57
+Date/Publication: 2019-11-05 17:10:02 UTC
