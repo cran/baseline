@@ -1,6 +1,6 @@
-112cbbf34676cf0ced617af4ec3da3bd *DESCRIPTION
+f56cbbfaf8e9225455b42fbe0cf33dde *DESCRIPTION
 90814b141790aa815c4fc99cc17b9742 *NAMESPACE
-44ef1f7538139974642afaa8b6c1cad5 *NEWS
+fc959f626745a4d4fe5558202da2e28a *NEWS
 eabb8f1bf16e7e1593cb631d0aed33dd *R/aaa.R
 17f2eef8c759d650adb9b57a79007a2e *R/baseline.R
 5c5e2ef51439e30061747d3fa313f5f3 *R/baseline.TAP.R
@@ -15,7 +15,7 @@ a9e55d2b27618af266eec89230158401 *R/baseline.rfbaseline.R
 1bf523b67b1d23a4d2a1a0f78b12371b *R/baseline.rollingBall.R
 f2636ec99ad9b7b28b78bda5ca538b21 *R/baseline.shirley.R
 c41503385aff5293c521cca5ed5cd3b2 *R/baselineGUI.R
-4b7c32d665807427c807a77096ea76f3 *R/baselineGUI2.R
+f0988fd1f65903b79cf07ef214455f10 *R/baselineGUI2.R
 361597709ef24fff51e99f9bd374472f *R/custom.baseline.R
 15d1bc7af2d28be78bf1ba2a25abbd61 *R/globals.R
 e6481e73f2726784c64ae5e4f9612fb0 *R/optimWizard.R
