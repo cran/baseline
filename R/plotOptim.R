@@ -1,5 +1,26 @@
 ### $Id: plotOptim.R 193 2012-06-24 21:13:42Z kristl $
 
+
+
+#' @title Plotting tool for result objects from optimization
+#' 
+#' @description A graphical user interface for plotting optimisation results, either one
+#' algorithm at the time or comparing algorithms.
+#' 
+#' @details \code{plotOptim} creates a user interface based on the supplied results.
+#' Curve and level plots from single algorithms or comparison of algorithms is
+#' avilable.
+#' 
+#' For single algorithms subsets, levels corresponding to local or global
+#' minima, and averages can be extracted for plotting. For comparison of
+#' algorithms levels corresponding to local or global minima can be used, or
+#' levels corresponding to the minimum when averaging over selected values of
+#' the regression parameter, e.g. selected components in PLSR.
+#' 
+#' @param results Result list from optimization
+#' @author Kristian Hovde Liland and Bjørn-Helge Mevik
+#' @keywords baseline spectra
+#' @export
 plotOptim <- function(results){
   ## Plot optimisation through GUI
   
@@ -102,7 +123,8 @@ plotOptim <- function(results){
           # gWidgets2::tag(parameterList[[nAlgs]][[lineNo]][[1]], "name") <- nameStr
           gWidgets2::addHandlerChanged(parameterList[[nAlgs]][[lineNo]][[1]], handler = function(h,...){
             linNo <- lineNo
-            nAlg <- nAlgs
+#            nAlg <- nAlgs
+            nAlg <- length(parameterList)
             # linNo <- gWidgets2::tag(h$obj)$no
             # nAlg <- gWidgets2::tag(h$obj)$alg
             if(gWidgets2::svalue(h$obj,index=TRUE) == 1){
@@ -162,7 +184,8 @@ plotOptim <- function(results){
         
         # Plot curves
         gWidgets2::addHandlerChanged(plotOne[[nAlgs]], handler = function(h,...){
-          nAlg <- nAlgs
+          nAlg <- length(plotTwo)
+          # nAlg <- nAlgs
           # nAlg <- gWidgets2::tag(h$obj)$alg
           if(is.vector(toPlot[[nAlg]])){ # Single curve
             plot(names(toPlot[[nAlg]]),toPlot[[nAlg]], type='l', ylab=results$results[[nAlg]]@qualMeasName, xlab=oneDimNames[nAlg])
@@ -191,7 +214,8 @@ plotOptim <- function(results){
         
         # Level plot
         gWidgets2::addHandlerChanged(plotTwo[[nAlgs]], handler = function(h,...){
-          nAlg <- nAlgs
+          nAlg <- length(plotTwo)
+#          nAlg <- nAlgs
           # nAlg <- gWidgets2::tag(h$obj)$alg
           Gray <- function(n){gray(seq(0,1, length.out=n))}
           if(gWidgets2::svalue(plotFlip[[nAlg]])==FALSE){
