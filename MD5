@@ -1,6 +1,6 @@
-f5f09b96cb08f1aed191482845b6c5b4 *DESCRIPTION
+0df0633c5b91033ba203e61ba3190001 *DESCRIPTION
 4607953136c45077ccf0ee8d691855d0 *NAMESPACE
-9e5a3c282de6cd6bea1dc429de1834ec *NEWS
+1170495659eb1ed4db6036238b2328ab *NEWS
 3b150cdd798899e10ee938b61fba4d3f *R/aaa.R
 64ead351d545fe96c7297f8acdc7e94d *R/baseline.R
 e8ca1824b00246e07c57b0490d1166cf *R/baseline.TAP.R
@@ -29,12 +29,12 @@ bd122546ea325ecf144eb79978727e54 *README.md
 5e0c48dbb3e9debd16b23266f6585f34 *data/O1s.rda
 f11bf269903558ab6def18afb07c3a31 *data/datalist
 d6957b5f164a19e2383ce5b38bfcf3fa *data/milk.rda
-90f674adf9148f263a511d98d9370e70 *inst/CITATION
+4b67e293ee215a0a127813f87e291bad *inst/CITATION
 31406c71637d7110279545cf86d1c957 *man/PLSRTest-class.Rd
 8d0490d0d166417adaf16cf28637326d *man/XPSdata.Rd
 eee6f1ac4403a16d0110d38165e35a77 *man/algorithm.Rd
 c1095bf753558ef865f80f9cc296a3c2 *man/baseline-class.Rd
-fd4d64df524df88e8332abbe75856211 *man/baseline-package.Rd
+8316918219fe9c744f099df33f5d21d8 *man/baseline-package.Rd
 b951ea206834157cd3552c015e74643b *man/baseline.Rd
 fd86f71d218e4dbf5926b3bef0ea1202 *man/baseline.TAP.Rd
 a1230616502c1b6a9a901297e50c4fcb *man/baseline.als.Rd
