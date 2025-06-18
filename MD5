@@ -1,4 +1,4 @@
-67c3f60dbad4ecea28c5535bb2b7a530 *DESCRIPTION
+54cacc1330c61711b29263ed3b42f169 *DESCRIPTION
 910696f5aa50e71e9c8b8de89b1e40b0 *NAMESPACE
 1170495659eb1ed4db6036238b2328ab *NEWS
 3b150cdd798899e10ee938b61fba4d3f *R/aaa.R
@@ -74,6 +74,6 @@ d942c8047a2580c5712b0895b40b6416 *man/plotBaseline.Rd
 f76b034a8fef38ba719695b0e56b772d *man/qualMeas.Rd
 bf568f5de59f2f24937aa91b1825e9e2 *man/ridgeRegressionTest-class.Rd
 d16ec3b2ffa54a2e31eec12709e91bba *man/runTest.Rd
-88c30ca5f4cc11b50dbfe99a4e2df33b *src/Makevars
+040c4f8124615c0e525e9f74e9edd4bb *src/Makevars
 ebc34e70c9d47c23504772e1641c281e *src/baselineMethods.c
 60f3f007c08c20956612877859ae197f *src/s2band.f
